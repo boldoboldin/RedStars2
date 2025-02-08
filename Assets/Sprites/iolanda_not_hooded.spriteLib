@@ -44,6 +44,52 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -785074285, guid: 263e32ff68003bd40943463db0f8cd5c, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 5
+  - m_Name: Walk
+    m_Hash: 765711723
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: iolanda_walk_spr_sheet_0
+      m_Hash: 90894890
+      m_Sprite: {fileID: -1198660090, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1359768989, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_1
+      m_Hash: 846054076
+      m_Sprite: {fileID: -1449578290, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 262914303, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_2
+      m_Hash: 728011526
+      m_Sprite: {fileID: -1253691989, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -933337744, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_3
+      m_Hash: 476291984
+      m_Sprite: {fileID: 1916781265, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1996717509, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_4
+      m_Hash: 34027059
+      m_Sprite: {fileID: 2006599927, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 462484980, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_5
+      m_Hash: 889194149
+      m_Sprite: {fileID: 1210711678, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -340972071, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_6
+      m_Hash: 738809631
+      m_Sprite: {fileID: -805368583, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1854102883, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    - m_Name: iolanda_walk_spr_sheet_7
+      m_Hash: 453928841
+      m_Sprite: {fileID: 503228119, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1448411159, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 8
   m_PrimaryLibraryGUID: bcf1cc12df4e25145916b70471c077b5
-  m_ModificationHash: 638746084681529151
+  m_ModificationHash: 638746312180455271
   m_Version: 1

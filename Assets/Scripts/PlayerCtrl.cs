@@ -30,6 +30,16 @@ public class PlayerCtrl : MonoBehaviour
 
         float currentSpd = Mathf.Lerp(spd, maxSpd, direction.magnitude); //
 
+        if (currentSpd > 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+
+        }
+
         rb.velocity = direction * currentSpd;
 
         if (inputX > 0)
