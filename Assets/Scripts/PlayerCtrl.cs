@@ -9,6 +9,7 @@ public class PlayerCtrl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    [SerializeField] protected int hp, damage;
     [SerializeField] float maxSpd;
 
     // Start is called before the first frame update
@@ -51,6 +52,24 @@ public class PlayerCtrl : MonoBehaviour
         {
             //
         }
+    }
+
+    public void TakeHit(int damage)
+    {
+        Debug.Log("Deu dano");
+
+        hp -= damage;
+
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("F");
+        //anim.SetTrigger("Die");
     }
 }
 
