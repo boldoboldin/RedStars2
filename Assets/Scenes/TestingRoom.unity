@@ -251,6 +251,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7534973710484938779, guid: ca80fdcfbd255af429b9b8145fc7114c, type: 3}
+      propertyPath: hp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534973710484938779, guid: ca80fdcfbd255af429b9b8145fc7114c, type: 3}
       propertyPath: dynamicJoystick
       value: 
       objectReference: {fileID: 582338666}
@@ -621,66 +625,6 @@ PrefabInstance:
     - target: {fileID: 2754481341043953418, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
       propertyPath: m_Name
       value: ElecDrone
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780588632572478529, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455772602694331365, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0000062
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455772602694331365, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Size.y
-      value: 0.59385186
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455772602694331365, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0032857081
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455772602694331365, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.01405573
-      objectReference: {fileID: 0}
-    - target: {fileID: 3455772602694331365, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505497344176297947, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d4d7807472ef0a14fae16e5088eb8f10, type: 3}
-    - target: {fileID: 3505497344176297947, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505497344176297947, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505497344176297947, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505497344176297947, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505497344176297947, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8396898039091309103, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8396898039091309103, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8396898039091309103, guid: 1b7a7759d1a31ee4abce03f615367e3d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
