@@ -90,6 +90,62 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 503228119, guid: 2de5d2e53c276c545a6a7ca383c3abe5, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 8
+  - m_Name: Electrocuted
+    m_Hash: 845821150
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: iolanda_electrocuted_spr_sheet_0
+      m_Hash: 891096888
+      m_Sprite: {fileID: -1128164729, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1128164729, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_1
+      m_Hash: 35274670
+      m_Sprite: {fileID: 1119735149, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1119735149, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_2
+      m_Hash: 454258196
+      m_Sprite: {fileID: 1946858794, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1946858794, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_3
+      m_Hash: 739532418
+      m_Sprite: {fileID: -436274763, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -436274763, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_4
+      m_Hash: 846252833
+      m_Sprite: {fileID: -1408692922, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1408692922, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_5
+      m_Hash: 91749303
+      m_Sprite: {fileID: 257775561, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 257775561, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_6
+      m_Hash: 478063117
+      m_Sprite: {fileID: 1230005828, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1230005828, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_7
+      m_Hash: 729389723
+      m_Sprite: {fileID: -1930760064, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1930760064, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_8
+      m_Hash: 1002866442
+      m_Sprite: {fileID: 1056420570, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1056420570, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    - m_Name: iolanda_electrocuted_spr_sheet_9
+      m_Hash: 214022044
+      m_Sprite: {fileID: 1244218280, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1244218280, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638746311972750022
+  m_ModificationHash: 638753998754326058
   m_Version: 1

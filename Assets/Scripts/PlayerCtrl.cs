@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
@@ -27,7 +25,7 @@ public class PlayerCtrl : MonoBehaviour
 
         Vector2 direction = new Vector2(inputX, inputY);
 
-        float currentSpd = Mathf.Lerp(0, maxSpd, direction.magnitude); //
+        float currentSpd = Mathf.Lerp(0, maxSpd, direction.magnitude);
 
         rb.velocity = direction * currentSpd;
 
@@ -54,9 +52,16 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+    public void TakeShock(int damage)
+    {
+        TakeHit(damage);
+    }
+
     public void TakeHit(int damage)
     {
         Debug.Log("Deu dano");
+
+        anim.SetTrigger("electrocute");
 
         hp -= damage;
 
@@ -69,7 +74,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Die()
     {
         Debug.Log("F");
-        //anim.SetTrigger("Die");
+        //anim.SetTrigger("die");
     }
 }
 
