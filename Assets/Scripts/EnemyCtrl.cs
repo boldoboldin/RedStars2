@@ -9,8 +9,8 @@ public class EnemyCtrl : MonoBehaviour
     [SerializeField] protected float  distance;
 
     [SerializeField] protected int hp;
-    public int damage;
     [SerializeField] protected float spd;
+    public int damage;
 
     protected Animator anim;
         

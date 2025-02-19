@@ -10,6 +10,8 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] protected int hp, damage;
     [SerializeField] float maxSpd;
 
+    private bool canMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +29,16 @@ public class PlayerCtrl : MonoBehaviour
 
         float currentSpd = Mathf.Lerp(0, maxSpd, direction.magnitude);
 
-        rb.velocity = direction * currentSpd;
+        if (canMove == true)
+        {
+            rb.velocity = direction * currentSpd;
 
-        anim.SetFloat("moveInput", currentSpd);
+            anim.SetFloat("moveInput", currentSpd);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
 
         if (inputX > 0)
         {
@@ -62,6 +71,7 @@ public class PlayerCtrl : MonoBehaviour
         Debug.Log("Deu dano");
 
         anim.SetTrigger("electrocute");
+        canMove = false;
 
         hp -= damage;
 
@@ -69,6 +79,11 @@ public class PlayerCtrl : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void ReturnMove()
+    {
+        canMove = true;
     }
 
     private void Die()
