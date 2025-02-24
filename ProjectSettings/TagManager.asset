@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - HitBox
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -39,9 +40,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: WallsBG
+    uniqueID: 639627381
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 2560091795
+    locked: 0
+  - name: WallsFG
+    uniqueID: 888009151
     locked: 0

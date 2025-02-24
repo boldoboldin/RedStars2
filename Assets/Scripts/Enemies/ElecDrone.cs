@@ -11,9 +11,10 @@ public class ElecDrone : EnemyCtrl
     //private float patrolTimer;
 
     // Update is called once per frame
+
     public override void Update()
     {
-        distance = Vector3.Distance(player.transform.position, transform.position);
+        distance = Vector2.Distance(player.transform.position, transform.position);
 
         if (distance < chargeDistance)
         {
