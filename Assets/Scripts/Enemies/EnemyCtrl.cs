@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyCtrl : MonoBehaviour
 {
     [SerializeField] protected GameObject player;
+    [SerializeField] protected GameObject sExplosionFX;
 
     [SerializeField] protected float  distance;
 

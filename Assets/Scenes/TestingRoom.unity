@@ -524,6 +524,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0d0e7a039f526499c356a3c5cd6d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &812610756
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.57191277
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.117629
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095949966973061798, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_Name
+      value: MineDrone (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
 --- !u!1 &854035657
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +870,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+--- !u!1001 &1108907022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0508934
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65787816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095949966973061798, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_Name
+      value: MineDrone (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
 --- !u!1 &1424930645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1115,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1562804665
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7281778
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1404233
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095949966973061798, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_Name
+      value: MineDrone (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
 --- !u!1 &1838224907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1573,63 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &1943980193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3281753
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42979217
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854698602712674037, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095949966973061798, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_Name
+      value: MineDrone (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
 --- !u!1001 &2002974200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1470,3 +1698,7 @@ SceneRoots:
   - {fileID: 2002974200}
   - {fileID: 412296064}
   - {fileID: 9732009}
+  - {fileID: 1108907022}
+  - {fileID: 1943980193}
+  - {fileID: 812610756}
+  - {fileID: 1562804665}

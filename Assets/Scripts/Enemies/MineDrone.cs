@@ -22,4 +22,12 @@ public class MineDrone : EnemyCtrl
     {
         anim.SetTrigger("Activate");
     }
+
+    void Explode()
+    {
+        Vector3 instantiatePos = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        
+        GameObject fx = Instantiate(sExplosionFX, instantiatePos, transform.rotation);
+        Destroy(fx, 3f);
+    }
 }

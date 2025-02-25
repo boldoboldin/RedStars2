@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  sExplosionFX: {fileID: 5240459408505588366, guid: 58ade387ad270c84e9cbfbd9f09775a3, type: 3}
   distance: 0
   hp: 0
   spd: 0
