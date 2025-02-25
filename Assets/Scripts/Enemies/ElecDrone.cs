@@ -6,9 +6,9 @@ public class ElecDrone : EnemyCtrl
 {
     [SerializeField] float chaseDistance, chargeDistance;
 
-    //[SerializeField] float patrolArea;
-    //private Vector2 patrolTarget;
-    //private float patrolTimer;
+    [SerializeField] float patrolArea;
+    private Vector2 rndPatrolPos;
+    private float patrolTimer;
 
     // Update is called once per frame
 
@@ -32,30 +32,30 @@ public class ElecDrone : EnemyCtrl
 
     void Patrol()
     {
-        /*if (patrolTimer <= 0)
+        if (patrolTimer <= 0)
         {
-            patrolTarget = new Vector2(transform.position.x + Random.Range(-patrolArea, patrolArea),
+            rndPatrolPos = new Vector2(transform.position.x + Random.Range(-patrolArea, patrolArea),
                                        transform.position.y + Random.Range(-patrolArea, patrolArea));
 
             patrolTimer = Random.Range(5f, 7f);
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, patrolTarget, spd * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, rndPatrolPos, spd * Time.deltaTime);
 
         if (patrolTimer > 0)
         {
             patrolTimer -= Time.deltaTime;
         }
 
-        if (patrolTarget.x > transform.position.x)
+        if (rndPatrolPos.x > transform.position.x)
         {
             transform.localScale = new(-1, 1);
         }
 
-        if (patrolTarget.x < transform.position.x)
+        if (rndPatrolPos.x < transform.position.x)
         {
             transform.localScale = new(1, 1);
-        }*/
+        }
     }
 
     void ChasePlayer()

@@ -1621,6 +1621,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3751755696279615042, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 334933946, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
     - target: {fileID: 9095949966973061798, guid: 514d2a1ffab057d429a9895f6a24ecda, type: 3}
       propertyPath: m_Name
       value: MineDrone (2)
