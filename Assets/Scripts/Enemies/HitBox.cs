@@ -15,7 +15,8 @@ public class HitBox : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerCtrl>().TakeHit(enemyCtrl.damage);
+            PlayerCtrl playerCtrl = collision.GetComponent<PlayerCtrl>();
+            playerCtrl.TakeHit(enemyCtrl.damage);
         }
     }
 }

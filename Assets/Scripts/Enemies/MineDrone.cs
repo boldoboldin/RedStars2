@@ -25,7 +25,7 @@ public class MineDrone : EnemyCtrl
 
     void Explode()
     {
-        Vector3 instantiatePos = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        Vector2 instantiatePos = new Vector2(transform.position.x, transform.position.y + 1f);
         
         GameObject fx = Instantiate(sExplosionFX, instantiatePos, transform.rotation);
         Destroy(fx, 3f);
