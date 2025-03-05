@@ -106,7 +106,6 @@ MonoBehaviour:
   - {fileID: -1148953148, guid: a585aede5b4b86d49957393236b082d6, type: 3}
   - {fileID: -690827597, guid: a585aede5b4b86d49957393236b082d6, type: 3}
   - {fileID: 237462598, guid: a585aede5b4b86d49957393236b082d6, type: 3}
-  spr: {fileID: 0}
 --- !u!1 &9092977958355304645
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +119,7 @@ GameObject:
   - component: {fileID: 3816080325570950213}
   m_Layer: 7
   m_Name: OilBarrel
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

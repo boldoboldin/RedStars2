@@ -5,18 +5,31 @@ using UnityEngine;
 public class HitBox : MonoBehaviour
 {
     EnemyCtrl enemyCtrl;
+    PlayerCtrl playerCtrl;
 
-    void Start()
-    {
-        enemyCtrl = GetComponentInParent<EnemyCtrl>();
-    }
+    [SerializeField] bool isEnemy;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (isEnemy)
         {
-            PlayerCtrl playerCtrl = collision.GetComponent<PlayerCtrl>();
-            playerCtrl.TakeHit(enemyCtrl.damage);
+            enemyCtrl = GetComponentInParent<EnemyCtrl>();
+
+            if (collision.CompareTag("Player"))
+            {
+                PlayerCtrl playerCtrl = collision.GetComponent<PlayerCtrl>();
+                playerCtrl.TakeHit(enemyCtrl.damage);
+            }
+        }
+        else
+        {
+            playerCtrl = GetComponentInParent<PlayerCtrl>();
+
+            if (collision.CompareTag("Enemy"))
+            {
+                EnemyCtrl enemyCtrl = collision.GetComponent<EnemyCtrl>();
+                enemyCtrl.TakeHit(playerCtrl.damage);
+            }
         }
     }
 }

@@ -20,10 +20,10 @@ public class MineDrone : EnemyCtrl
 
     void ActivateAtk()
     {
-        anim.SetTrigger("Activate");
+        anim.SetTrigger("activate");
     }
 
-    void Explode()
+    void LargeExplosion()
     {
         Vector2 instantiatePos = new Vector2(transform.position.x, transform.position.y + 1f);
         

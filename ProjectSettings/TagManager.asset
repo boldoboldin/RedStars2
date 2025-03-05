@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Scenery
+    uniqueID: 4086424183
+    locked: 0
   - name: WallsBG
     uniqueID: 639627381
     locked: 0

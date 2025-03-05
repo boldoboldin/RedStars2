@@ -75,6 +75,6 @@ public class ElecDrone : EnemyCtrl
 
     void ChargeAtk()
     {
-        anim.SetTrigger("Charge");
+        anim.SetTrigger("chargeAtk");
     }
 }

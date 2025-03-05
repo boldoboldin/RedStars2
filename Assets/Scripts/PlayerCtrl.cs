@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    [SerializeField] DynamicJoystick dynamicJoystick;
+    [SerializeField] DynamicJoystick moveJoystick, atkJoystick;
 
     private Rigidbody2D rb;
     private Animator anim;
 
-    [SerializeField] protected int hp, damage;
+    [SerializeField] protected int hp;
     [SerializeField] float maxSpd;
+    public int damage;
 
     private bool canMove = true;
 
@@ -22,8 +23,14 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float inputX = dynamicJoystick.Horizontal;
-        float inputY = dynamicJoystick.Vertical;
+        Attack();
+        Move();
+    }
+
+    private void Move()
+    {
+        float inputX = moveJoystick.Horizontal;
+        float inputY = moveJoystick.Vertical;
 
         Vector2 direction = new Vector2(inputX, inputY);
 
@@ -42,22 +49,43 @@ public class PlayerCtrl : MonoBehaviour
 
         if (inputX > 0)
         {
-            transform.localScale = new (-1,1);
+            transform.localScale = new(-1, 1);
         }
 
         if (inputX < 0)
         {
-            transform.localScale = new(1,1);
+            transform.localScale = new(1, 1);
         }
+    }
 
-        if (inputY > 0)
-        {
-            //
-        }
+    private void Attack()
+    {
+        float inputX = atkJoystick.Horizontal;
+        float inputY = atkJoystick.Vertical;
 
-        if (inputY < 0)
-        {
-            //
+        if (inputX != 0 || inputY != 0)
+        {      
+            Vector2 attackDirection = new Vector2(inputX, inputY).normalized;
+
+            if (inputX > 0)
+            {
+                transform.localScale = new(-1, 1);
+            }
+
+            if (inputX < 0)
+            {
+                transform.localScale = new(1, 1);
+            }
+
+            if (inputY > 0)
+            {
+                anim.SetTrigger("highAtk");
+            }
+
+            if (inputY < 0)
+            {
+                anim.SetTrigger("lowAtk");
+            }
         }
     }
 
@@ -68,10 +96,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public void TakeHit(int damage)
     {
-        Debug.Log("Deu dano");
-
         anim.SetTrigger("electrocute");
-        canMove = false;
 
         hp -= damage;
 
@@ -81,14 +106,20 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
-    public void ReturnMove()
+    public void MoveCtrl(int canMove)
     {
-        canMove = true;
+        if(canMove == 0)
+        {
+            this.canMove = false;
+        }
+        else
+        {
+            this.canMove = true;
+        }
     }
 
     private void Die()
     {
-        Debug.Log("F");
         //anim.SetTrigger("die");
     }
 }
