@@ -221,9 +221,9 @@ MonoBehaviour:
   sExplosionFX: {fileID: 5240459408505588366, guid: 58ade387ad270c84e9cbfbd9f09775a3, type: 3}
   distance: 0
   hp: 3
-  spd: 2
+  spd: 2.5
   damage: 1
-  chaseDistance: 5
+  chaseDistance: 10
   chargeDistance: 1
   patrolArea: 7
 --- !u!1 &2780588632572478529
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 1
+  isExplosion: 0
 --- !u!58 &5170980959499555177
 CircleCollider2D:
   m_ObjectHideFlags: 0
