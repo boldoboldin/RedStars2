@@ -7,7 +7,7 @@ public class PlayerCtrl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim, weaponAnim;
 
-    [SerializeField] private GameObject weapon;
+    [SerializeField] private GameObject weapon, shotPos, shotFX, sparkFX, bulletMarkFX;
 
     [SerializeField] private int hp;
     [SerializeField] float maxSpd, shotTimer;
@@ -16,7 +16,6 @@ public class PlayerCtrl : MonoBehaviour
 
     private bool isFliped = false, canMove = true;
 
-    public LineRenderer raycastLineRenderer;
     public LayerMask ignoreLayer;
 
     // Start is called before the first frame update
@@ -72,16 +71,7 @@ public class PlayerCtrl : MonoBehaviour
         float inputX = rightJoystick.Horizontal;
         float inputY = rightJoystick.Vertical;
 
-        Vector2 direction = new Vector2(-inputX, -inputY);
-
-        if (isFliped)
-        {
-            direction = new Vector2(inputX, inputY);
-        }
-        else
-        {
-            direction = new Vector2(-inputX, -inputY);
-        }
+        Vector2 direction = isFliped ? new Vector2(inputX, inputY) : new Vector2(-inputX, -inputY);
 
         if (direction.magnitude > 0)
         {
@@ -120,40 +110,36 @@ public class PlayerCtrl : MonoBehaviour
 
     private void Shoot()
     {
+        Vector2 direction = isFliped ? weapon.transform.right : -weapon.transform.right;
+
+        GameObject _shotFX = Instantiate(shotFX, shotPos.transform.position, Quaternion.identity);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        _shotFX.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        Destroy(_shotFX, 1f);
+
+        weaponAnim.SetTrigger("shoot");
+
+        RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, direction, Mathf.Infinity, ~ignoreLayer);
+
+        if (hit.collider != null)
         {
-            Vector2 direction = -weapon.transform.right;
+            Debug.Log("Hit: " + hit.collider.name);
 
-            RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, direction, Mathf.Infinity, ~ignoreLayer);
-
-            weaponAnim.SetTrigger("shoot");
-
-            if (isFliped)
+            if (hit.collider.CompareTag("Enemy"))
             {
-                direction = weapon.transform.right;
+                EnemyCtrl enemyCtrl = hit.collider.GetComponent<EnemyCtrl>();
+
+                enemyCtrl.TakeHit(damage); 
             }
             else
             {
-                direction = -weapon.transform.right;
+                GameObject _bulletMarkFX = Instantiate(bulletMarkFX, hit.transform.position, Quaternion.identity);
+                Destroy(_bulletMarkFX, 2f);
             }
 
-            if (hit.collider != null)
-            {
-                Debug.Log("Hit: " + hit.collider.name);
-            }
-
-            //if (raycastLineRenderer != null)
-            //{
-            //    raycastLineRenderer.SetPosition(0, weapon.transform.position);
-
-            //    if (hit.collider != null)
-            //    {
-            //        raycastLineRenderer.SetPosition(1, hit.point);
-            //    }
-            //    else
-            //    {
-            //        raycastLineRenderer.SetPosition(1, weapon.transform.position + (Vector3)direction * 10f);
-            //    }
-            //}
+            GameObject _sparkFX = Instantiate(sparkFX, hit.transform.position, Quaternion.identity);
+            Destroy(_sparkFX, 1f);
         }
     }
 
