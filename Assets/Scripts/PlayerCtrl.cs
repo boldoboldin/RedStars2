@@ -7,14 +7,15 @@ public class PlayerCtrl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim, weaponAnim;
 
-    [SerializeField] private GameObject weapon, shotPos, shotFX, sparkFX, bulletMarkFX;
+    [SerializeField] private GameObject weapon, shotPos, shotFX, sparkFX, smokeFX;
 
     [SerializeField] private int hp;
     [SerializeField] float maxSpd, shotTimer;
+    [SerializeField] SpriteRenderer aim;
     public float currentShotTimer = 0f;
     public int damage;
 
-    private bool isFliped = false, canMove = true;
+    [SerializeField] private bool isFliped = false, isAiming = false, canMove = true;
 
     public LayerMask ignoreLayer;
 
@@ -44,7 +45,14 @@ public class PlayerCtrl : MonoBehaviour
 
         if (canMove == true)
         {
-            rb.velocity = direction * currentSpd;
+            if (isAiming)
+            {
+                rb.velocity = direction * currentSpd / 2;
+            }
+            else
+            {
+                rb.velocity = direction * currentSpd;
+            }
 
             anim.SetFloat("moveInput", currentSpd);
         }
@@ -53,17 +61,20 @@ public class PlayerCtrl : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
 
-        if (inputX > 0)
+        if (!isAiming)
         {
-            transform.localScale = new(-1, 1);
-            isFliped = true;
-        }
+            if (inputX > 0)
+            {
+                transform.localScale = new(-1, 1);
+                isFliped = true;
+            }
 
-        if (inputX < 0)
-        {
-            transform.localScale = new(1, 1);
-            isFliped = false;
-        }
+            if (inputX < 0)
+            {
+                transform.localScale = new(1, 1);
+                isFliped = false;
+            }
+        }   
     }
 
     private void WeaponMove()
@@ -77,13 +88,13 @@ public class PlayerCtrl : MonoBehaviour
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            angle = Mathf.Clamp(angle, -90f, 90f);
-
-            weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, Quaternion.Euler(0, 0, angle), maxSpd * Time.deltaTime);
+            weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, Quaternion.Euler(0, 0, angle), maxSpd * 2 * Time.deltaTime);
         }
 
-        if (inputX != 0)
+        if (inputX != 0 && inputY != 0)
         {
+            isAiming = true;
+
             if (currentShotTimer <= shotTimer)
             {
                 currentShotTimer += 1 * Time.deltaTime;
@@ -93,7 +104,7 @@ public class PlayerCtrl : MonoBehaviour
                 Shoot();
                 currentShotTimer = 0f;
             }
-            
+
             if (inputX > 0)
             {
                 transform.localScale = new(-1, 1);
@@ -105,7 +116,38 @@ public class PlayerCtrl : MonoBehaviour
                 transform.localScale = new(1, 1);
                 isFliped = false;
             }
+
+            Vector2 aimrDirection = isFliped ? weapon.transform.right : -weapon.transform.right;
+
+            RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, aimrDirection, 9f, ~ignoreLayer);
+
+            if (hit.collider != null)
+            {
+                float distance = hit.distance; 
+                AdjustAimWidth(distance);
+            }
+            else
+            {
+                AdjustAimWidth(9f);
+            }
         }
+        else
+        {
+            isAiming = false;
+        }
+    }
+
+    private void AdjustAimWidth(float distance)
+    {
+        //float maxWidth = 9f, minWidth = 3f;
+
+        float currentWidth = Mathf.Abs(distance);
+
+        aim.size = new Vector2(currentWidth, 0.0625f);
+
+        Debug.Log("currentWidht: " + currentWidth + "distance: " + distance);
+
+
     }
 
     private void Shoot()
@@ -132,13 +174,10 @@ public class PlayerCtrl : MonoBehaviour
 
                 enemyCtrl.TakeHit(damage); 
             }
-            else
-            {
-                GameObject _bulletMarkFX = Instantiate(bulletMarkFX, hit.transform.position, Quaternion.identity);
-                Destroy(_bulletMarkFX, 2f);
-            }
 
-            GameObject _sparkFX = Instantiate(sparkFX, hit.transform.position, Quaternion.identity);
+            Vector2 instantiatePos = new Vector2(hit.transform.position.x, hit.transform.position.y + 1f);
+
+            GameObject _sparkFX = Instantiate(sparkFX, instantiatePos, Quaternion.identity);
             Destroy(_sparkFX, 1f);
         }
     }

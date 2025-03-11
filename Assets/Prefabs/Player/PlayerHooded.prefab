@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 93459981655056537}
   - component: {fileID: 7170717137622977586}
   m_Layer: 0
-  m_Name: LaserSight
+  m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,8 +135,8 @@ Transform:
   m_GameObject: {fileID: 1480277966802282243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.31, y: 0.15600002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.27, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1368245956533341899}
@@ -179,20 +179,20 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 186463859
+  m_SortingLayer: 3
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 8b7ba4689c0f9544ea41bfaacf7be0e5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 3, y: 0.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &2799547887573036839
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,16 +479,20 @@ MonoBehaviour:
   weapon: {fileID: 905862970697528789}
   shotPos: {fileID: 2799547887573036839}
   shotFX: {fileID: 5240459408505588366, guid: ef8fd96c98db83647abf2c9c7e3bf1c2, type: 3}
-  sparkFX: {fileID: 5240459408505588366, guid: 58ade387ad270c84e9cbfbd9f09775a3, type: 3}
-  bulletMarkFX: {fileID: 5441906825203651176, guid: 658ae40fadc5c2e43a3e744617eec014, type: 3}
+  sparkFX: {fileID: 5240459408505588366, guid: 476ff6e4e502da94ba0f75090dc7231b, type: 3}
+  smokeFX: {fileID: 0}
   hp: 20
-  maxSpd: 3
-  shotTimer: 1
+  maxSpd: 6
+  shotTimer: 0.5
+  aim: {fileID: 7170717137622977586}
   currentShotTimer: 0
   damage: 2
+  isFliped: 0
+  isAiming: 0
+  canMove: 1
   ignoreLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
 --- !u!95 &1207853679592955305
 Animator:
   serializedVersion: 5
