@@ -9,12 +9,6 @@ public class SprRandomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetRdnSpr();
-    }
-
-    private void SetRdnSpr()
-    {
-        int rndSpr = Random.Range(0, sprList.Count);
-        GetComponent<SpriteRenderer>().sprite = sprList[rndSpr];
+        GetComponent<SpriteRenderer>().sprite = sprList[Random.Range(0, sprList.Count)];
     }
 }
