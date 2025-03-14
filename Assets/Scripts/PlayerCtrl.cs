@@ -68,8 +68,7 @@ public class PlayerCtrl : MonoBehaviour
                 transform.localScale = new(-1, 1);
                 isFliped = true;
             }
-
-            if (inputX < 0)
+            else 
             {
                 transform.localScale = new(1, 1);
                 isFliped = false;
@@ -126,10 +125,6 @@ public class PlayerCtrl : MonoBehaviour
                 float distance = hit.distance; 
                 AdjustAimWidth(distance);
             }
-            else
-            {
-                AdjustAimWidth(9f);
-            }
         }
         else
         {
@@ -139,29 +134,15 @@ public class PlayerCtrl : MonoBehaviour
 
     private void AdjustAimWidth(float distance)
     {
-        //float maxWidth = 9f, minWidth = 3f;
+        float maxWidth = 9f, minWidth = 3f;
 
-        float currentWidth = Mathf.Abs(distance);
-
+        float currentWidth = Mathf.Clamp(Mathf.Abs(distance), minWidth, maxWidth);
         aim.size = new Vector2(currentWidth, 0.0625f);
-
-        Debug.Log("currentWidht: " + currentWidth + "distance: " + distance);
-
-
     }
 
     private void Shoot()
     {
         Vector2 direction = isFliped ? weapon.transform.right : -weapon.transform.right;
-
-        GameObject _shotFX = Instantiate(shotFX, shotPos.transform.position, Quaternion.identity);
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        _shotFX.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        Destroy(_shotFX, 1f);
-
-        weaponAnim.SetTrigger("shoot");
-
         RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, direction, Mathf.Infinity, ~ignoreLayer);
 
         if (hit.collider != null)
@@ -180,6 +161,14 @@ public class PlayerCtrl : MonoBehaviour
             GameObject _sparkFX = Instantiate(sparkFX, instantiatePos, Quaternion.identity);
             Destroy(_sparkFX, 1f);
         }
+
+        //GameObject _shotFX = Instantiate(shotFX, shotPos.transform.position, Quaternion.identity);
+
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //_shotFX.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        //Destroy(_shotFX, 1f);
+
+        weaponAnim.SetTrigger("shoot");
     }
 
     public void TakeShock(int damage)
