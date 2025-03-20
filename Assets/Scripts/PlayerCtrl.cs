@@ -109,15 +109,13 @@ public class PlayerCtrl : MonoBehaviour
                 transform.localScale = new(-1, 1);
                 isFliped = true;
             }
-
-            if (inputX < 0)
+            else
             {
                 transform.localScale = new(1, 1);
                 isFliped = false;
             }
 
             Vector2 aimrDirection = isFliped ? weapon.transform.right : -weapon.transform.right;
-
             RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, aimrDirection, 9f, ~ignoreLayer);
 
             if (hit.collider != null)
