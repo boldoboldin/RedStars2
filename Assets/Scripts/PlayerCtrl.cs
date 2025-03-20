@@ -68,7 +68,8 @@ public class PlayerCtrl : MonoBehaviour
                 transform.localScale = new(-1, 1);
                 isFliped = true;
             }
-            else 
+            
+            if (inputX < 0)
             {
                 transform.localScale = new(1, 1);
                 isFliped = false;
@@ -132,7 +133,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private void AdjustAimWidth(float distance)
     {
-        float maxWidth = 9f, minWidth = 3f;
+        float maxWidth = 9f, minWidth = 1f;
 
         float currentWidth = Mathf.Clamp(Mathf.Abs(distance), minWidth, maxWidth);
         aim.size = new Vector2(currentWidth, 0.0625f);
@@ -141,7 +142,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Shoot()
     {
         Vector2 direction = isFliped ? weapon.transform.right : -weapon.transform.right;
-        RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, direction, Mathf.Infinity, ~ignoreLayer);
+        RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, direction, 12f, ~ignoreLayer);
 
         if (hit.collider != null)
         {
